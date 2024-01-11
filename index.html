@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Converter</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Currency Converter App in JavaScript | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Currency Converter</h1>
-        <div class="currency-container">
-            <select id="currency-first">
-                <option value="AUD">AUD</option>
-                <option value="CAD">CAD</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="INR">INR</option>
-                <option value="JPY">JPY</option>
-                <option value="USD" selected>USD</option>
-            </select>
-            <input type="number" id="worth-first" value="1" min="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Currency Converter</header>
+      <form action="#">
+        <div class="amount">
+          <p>Enter Amount</p>
+          <input type="text" value="1">
         </div>
-        <div class="currency-container">
-            <select id="currency-second">
-                <option value="AUD">AUD</option>
-                <option value="CAD">CAD</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="INR" selected>INR</option>
-                <option value="JPY">JPY</option>
-                <option value="USD">USD</option>
-            </select>
-            <input type="number" id="worth-second"  disabled>
+        <div class="drop-list">
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+              <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+              <select> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
+          </div>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-box">
+              <img src="https://flagcdn.com/48x36/np.png" alt="flag">
+              <select> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
+          </div>
         </div>
-        <p class="exchange-rate" id="exchange-rate">1 USD = 138.5802 JPY</p>
+        <div class="exchange-rate">Getting exchange rate...</div>
+        <button>Get Exchange Rate</button>
+      </form>
     </div>
+
+    <script src="country.js"></script>
     <script src="index.js"></script>
-</body>
+
+  </body>
 </html>
